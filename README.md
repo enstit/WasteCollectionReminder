@@ -2,6 +2,11 @@
 
 This repository contains the code to run a bash script that sends you a Telegram message remembering to expose the correct waste bin for the following day city waste collection.
 
+<figure style="display:block;margin:auto;width:200px;text-align:center;">
+  <img src="screenshot.jpg" alt="my alt text"/>
+  <figcaption style="font-size:.8em;">Telegram notifications</figcaption>
+</figure>
+
 ## Collection days
 
 Following the [Udine collection calendar](https://netaziendapulita.it/comuni/udine) for the 2022, the city collections bappend in this days:
@@ -63,11 +68,18 @@ nano config.ini
 
 ##### Environment variables
 
-* `NOTIFY_HOUR`: the hour of the day you want to receive the reminder notification, using the 24-hours format. Default value to `19`.
+###### `Collection days` section
+* `Monday`: the waste bin that is being collected each Monday;
+* `Tuesday`: the waste bin that is being collected each Tuesday;
+* ...
+* `Saturday`: the waste bin that is being collected each Saturday.
 
-* `NOTIFY_MINUTE`: the minute of the `NOTIFY_HOUR` you want to receive the reminder notification. Default value to `00`.
+If multiple bins are being collected in a single day, place them into an array.
 
-* `BOT_TOKEN`: ...
+###### `Notify config` section
+* `BOT_TOKEN`: yout Telegram API token to send the notifications with the bot you created previously;
+* `GROUP_ID`: the Telgram bot chat ID.
+  
 
 #### 4. Add the script to crontab
 
