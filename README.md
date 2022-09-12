@@ -86,13 +86,18 @@ If multiple bins are being collected in a single day, place them into an array.
 Enter the crontab configuration file
 
 ```bash
-echo "<MINUTE> <HOUR> * * * /bin/sh <PATH TO THE PROJECT FOLDER>/send_wastecollection_notify.sh" >> crontab
+crontab -l > mycron # write out current crontab
+echo "<MINUTE> <HOUR> * * * /bin/sh <PATH TO THE PROJECT FOLDER>/send_wastecollection_notify.sh" >> mycron # echo new cron into cron file
+crontab mycron # install new cron file
+rm mycron # remove temporary file
 ```
 
 changin `MINUTE` to the minute of the `HOUR`, and `HOUR` to the 24-format hour you want to receive the notification. So for example, if you want to be notified each day at 7pm the day before the city collection, simply run
 
 ```bash
-echo "00 19 * * * /bin/sh <PATH TO THE PROJECT FOLDER>/send_wastecollection_notify.sh" >> crontab
+crontab -l > mycron
+echo "00 19 * * * /bin/sh <PATH TO THE PROJECT FOLDER>/send_wastecollection_notify.sh" >> mycron
+crontab mycron && rm mycron
 ```
 
 And you're done!
