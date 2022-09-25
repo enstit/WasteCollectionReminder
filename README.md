@@ -63,11 +63,8 @@ nano config.ini
 
 ##### Environment variables
 
-* `NOTIFY_HOUR`: the hour of the day you want to receive the reminder notification, using the 24-hours format. Default value to `19`.
-
-* `NOTIFY_MINUTE`: the minute of the `NOTIFY_HOUR` you want to receive the reminder notification. Default value to `00`.
-
-* `BOT_TOKEN`: ...
+* `BOT_TOKEN`: the Telegram token for your bot;
+* `GROUP_ID`: the group ID from your Telegram bot.
 
 #### 4. Add the script to crontab
 
