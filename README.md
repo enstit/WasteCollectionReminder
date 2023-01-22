@@ -9,7 +9,7 @@ This repository contains the code to run a bash script that sends you a Telegram
 
 ## Collection days
 
-Following the [Udine collection calendar](https://netaziendapulita.it/comuni/udine) for the 2022, the city collections bappend in this days:
+Following the [Udine collection calendar](https://netaziendapulita.it/comuni/udine) for the 2022, the city collections happens in this days:
 
 |             | Monday | Tuesday | Wednesday | Thursday | Friday | Saturday | Sunday |
 | ----------- |:------:|:-------:|:---------:|:--------:|:------:|:--------:| ------ |
@@ -41,7 +41,7 @@ First of all, [clone](https://docs.github.com/en/repositories/creating-and-manag
 
 ```bash
 cd ~    # Navigate to the place where you want the project folder to be
-git clone enstit/udine_wastecollection_reminder
+git clone enstit/wastecollection_reminder
 ```
 
 #### 2. Create a Telegram bot

@@ -1,7 +1,10 @@
-#! /bin/bash
+#! /usr/bin/env bash
+
+# Get source file directory
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 # Read variables from config file
-source <(grep = /home/enstit/scripts/udine_wastecollection_reminder/config.ini)
+source <(grep = "${SCRIPT_DIR}/config.ini")
 
 # Get the current day of week in locale’s full weekday name (e.g. "Monday")
 DAY_OF_WEEK=$(date --date="tomorrow" +%A)
